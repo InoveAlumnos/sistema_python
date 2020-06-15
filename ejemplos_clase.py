@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-Extra [Python]
+Sistema [Python]
 Ejemplos de clase
 ---------------------------
 Autor: Inove Coding School
