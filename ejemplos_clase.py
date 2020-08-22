@@ -4,7 +4,7 @@ Sistema [Python]
 Ejemplos de clase
 ---------------------------
 Autor: Inove Coding School
-Version: 1.2
+Version: 1.3
 
 Descripcion:
 Programa creado para mostrar ejemplos prácticos de los visto durante la clase
@@ -12,7 +12,7 @@ Programa creado para mostrar ejemplos prácticos de los visto durante la clase
 
 __author__ = "Inove Coding School"
 __email__ = "alumnos@inove.com.ar"
-__version__ = "1.2"
+__version__ = "1.3"
 
 import sys
 import os
@@ -104,19 +104,21 @@ def directorios(nombre_archivo):
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
+    print(sys.argv)
+    if len(sys.argv) > 1:
+        nombre_archivo = str(sys.argv[1])
+    else:
+        print("USO: ejemplos_clase.py <nombre_archivo>")
+        quit()
+        nombre_archivo = 'nombre.txt'  # Nombre por defecto
+
+    excepciones(nombre_archivo)
+    existencia_archivo(nombre_archivo)
+    directorios('inove.jpg')
+
     '''
     Como agregar argumentos al lanzador
     "windows": {
                 "args": ["casa.txt"]
               }
     '''
-
-    print(sys.argv)
-    if len(sys.argv) > 1:
-        nombre_archivo = str(sys.argv[1])
-    else:
-        nombre_archivo = 'nombre.txt'  # Nombre por defecto
-
-    excepciones(nombre_archivo)
-    existencia_archivo(nombre_archivo)
-    directorios('inove.jpg')
