@@ -1,20 +1,12 @@
-#!/usr/bin/env python
-'''
-Sistema [Python]
-Ejemplos de clase
----------------------------
-Autor: Inove Coding School
-Version: 1.4
+# Sistema [Python]
+# Ejemplos de clase
+# ---------------------------
+# Autor: Inove Coding School
+# Version: 2.0
 
-Descripcion:
-Programa creado para mostrar ejemplos prácticos de los visto durante la clase
-'''
+# Descripcion:
+# Programa creado para mostrar ejemplos prácticos de los visto durante la clase
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
-__version__ = "1.4"
-
-import sys
 import os
 
 
@@ -32,7 +24,6 @@ def excepciones(nombre_archivo):
         division = 3 / 0
     except:
         print('No existe la division por cero')
-        division = sys.float_info.max
 
     # Otra clásica excepción es intentar abrir un archivo que no existe
     # Cuando esto ocurre el sistema falla y se detiene el programa al
@@ -42,7 +33,6 @@ def excepciones(nombre_archivo):
         fi = open(nombre_archivo, 'r')
     except:
         print('No se encuentra el archivo', nombre_archivo)
-        fi = None
 
     return
 
